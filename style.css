@@ -1,0 +1,803 @@
+
+body {
+    display: grid;
+    place-items: center;
+    background-image: url(img/stars.png);
+}
+
+/* background-color: rgb(64, 172, 240); */
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: rgb(64, 172, 240);
+    width: 80vw;
+    height: 90vh;
+    margin-top: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    font-size: larger;
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 40px;
+    width: calc(100% - 80px);
+    flex-wrap: nowrap;
+    gap: 50px;
+    vertical-align: middle;
+}
+
+.top-buttons .child:first-child {
+    flex: 0 0 auto;
+    text-align: left;
+}
+
+.top-buttons .child:nth-child(2) {
+    flex: 0 0 auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-buttons .child:nth-child(3) {
+    flex: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.top-buttons .child:nth-child(2):has(.end-tut-button) ~ .child:nth-child(3) {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.top-buttons .child:nth-child(4) {
+    flex: 0 0 auto;
+}
+
+.language-dropdown {
+    position: relative;
+}
+
+.inline-block-child {
+    display: inline-block; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 55px;
+    margin-right: 10px; 
+}
+
+.content {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.music-button {
+    background-image: url(img/no-music.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px; 
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(84, 115, 250); 
+    background-color: white;
+    cursor: pointer;
+}
+
+.leftimg {
+    background-image: url(img/1-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px; 
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid rgb(84, 115, 250); 
+    background-color: white;
+    cursor: pointer;
+}
+
+.rightimg {
+    background-image: url(img/1-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px; 
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid rgb(84, 115, 250); 
+    background-color: white;
+    cursor: pointer;
+}
+
+.log-out-button { 
+    background-image: url(img/log-out.png); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 50px; 
+    width: 50px; 
+    border-radius: 50%;
+    cursor: pointer; 
+    background-color: transparent;
+}
+
+a.log-out-button {
+    display: inline-block;
+    text-decoration: none;
+    color: transparent;
+    vertical-align: middle;
+}
+
+
+.ap-button {
+    background-image: url(img/apuntes.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px; 
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(84, 115, 250); 
+    background-color: white;
+    cursor: pointer;
+}
+
+a.ap-button {
+    display: inline-block;
+    text-decoration: none;
+    color: transparent;
+    vertical-align: middle;
+}
+
+a.end-tut-button {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+}
+
+a.play-button { 
+    display: inline-block; 
+    text-decoration: none; 
+    color: transparent; 
+}
+
+.play-button {
+    background-image: url(img/jugar.png);
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    background-size: cover;
+    height: 300px; 
+    width: 300px;
+    border-radius: 50%; 
+    border: 2px solid rgb(84, 115, 250); 
+    cursor: pointer;
+    background-color: white;
+}
+
+/* Estilos para el botón de cambio de idioma */
+.lang-button{
+    background-image: url(img/lang.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px; 
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(84, 115, 250); 
+    background-color: white;
+    cursor: pointer;
+}
+
+.langDrop {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.langDrop:hover, .lang-button:focus {
+  background-color: #2980B9;
+}
+
+.langDrop {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos para el contenido del dropdown de idiomas */
+.lang-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.lang-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.lang-content a:hover {background-color: #ddd;}
+.show {display:block;}
+
+button span {
+  display: none;
+}
+
+.log-out-button span {
+  display: none;
+}
+
+/* Estilos para el botón "Finalizar Tutorial" */
+.end-tut-button {
+    font-size: large;
+    background-color: rgb(84, 115, 250);
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Estilos para el botón "Siguiente" en el tutorial */
+.next-button {
+    font-size: large;
+    background-color: rgb(84, 115, 250);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+/* Estilos para el encabezado de los apuntes */
+
+.apuntes-header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+.back-button{
+    font-size: large;
+    background-color: rgb(84, 115, 250);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.notes-panel {
+    display:none;
+    position:absolute;
+    inset:0;
+    background-image: url(img/stars.png);
+    padding-left: 100px;
+    overflow:auto;
+    z-index:50;
+}
+
+#notes-canvas-container {
+    width: 100%;
+    height: 70vh;
+    background-color: white;
+}
+
+/* Estilos para los pasos del tutorial */
+
+#tutorial-step-1 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#tutorial-step-1 .frac-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+#tutorial-step-2 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: larger;
+    justify-content: center;
+}
+
+#tutorial-step-3 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: larger;
+}
+
+#tutorial-step-4 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#tutorial-step-4 .step-4-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#tutorial-step-4 .frac-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border: 2px solid #999;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 14px;
+}
+
+#tutorial-step-5 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#tutorial-step-5 .frac-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#tutorial-step-2 .frac-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+    font-size: 2em;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+}
+
+.frac-container-mix .whole_1, .frac-container-mix .whole_2 {
+    font-size: 2em;
+}
+
+footer { 
+    color: white; 
+}
+
+/* Estilos para los asteroides decorativos */
+
+.asteroid-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+    bottom: 20px;
+}
+
+.asteroid-container2 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 200px;
+    position: absolute;
+    padding-top: 30px;
+}
+
+.asteroid-container3 { 
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+}
+
+.symbol-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.symbol-row p {
+    margin: 0;
+}
+
+.moon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.moon:hover:not(.moon-red) {
+  background-color: red;
+}
+
+.shadow-layer {
+    background: gray;
+    box-shadow: none;
+    width: 100px;
+    height: 100px;
+}
+
+.moon-gray {
+    background: #888;
+}
+
+.moon-red {
+    background-color: red;
+}
+
+.white-body {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.crater {
+    position: absolute;
+    background: #e0e0e0;
+    border-radius: 50%;
+}
+
+.c1 { 
+    width: 20px; 
+    height: 20px; 
+    top: 25px; 
+    left: 15px; 
+}
+.c2 { 
+    width: 12px; 
+    height: 12px; 
+    bottom: 15px; 
+    right: 25px; 
+}
+
+.symbol {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #555;
+    z-index: 2;
+}
+
+.frac-container-problem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.selected-symbol {
+    font-size: 3rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.selected-symbol .c1{
+    width: 12px;
+    height: 12px;
+    top: 15px;
+    left: 10px;
+}
+
+/* small moon inside selected-symbol */
+.selected-symbol .moon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+.selected-symbol .white-body {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected-symbol .symbol {
+    font-size: 1.6rem;
+    color: #555;
+}
+
+/* Estilos para los botones de niveles */
+.intermedio-button {
+    background-image: url(img/intermedio_stars.png);
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    background-size: cover;    
+    background-position: center; 
+    height: 150px; 
+    width: 150px;
+    border-radius: 50%; 
+    border: 2px solid rgb(84, 115, 250); 
+    cursor: pointer;
+    background-color: white;
+}
+
+.avanzado-button {
+    background-image: url(img/avanzado_stars.png);
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    background-size: cover;    
+    background-position: center;    
+    height: 150px; 
+    width: 150px;
+    border-radius: 50%; 
+    border: 2px solid rgb(84, 115, 250); 
+    cursor: pointer;
+    background-color: white;
+}
+
+.impropio-button {
+    background-image: url(img/fracciones_impropias.png);
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    background-size: cover;    
+    background-position: center;    
+    height: 150px; 
+    width: 150px;
+    border-radius: 50%; 
+    border: 2px solid rgb(84, 115, 250); 
+    cursor: pointer;
+    background-color: white;
+}
+
+.mixto-button {
+    background-image: url(img/numeros_mixtos.png);
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    background-size: cover;    
+    background-position: center;    
+    height: 150px; 
+    width: 150px;
+    border-radius: 50%; 
+    border: 2px solid rgb(84, 115, 250); 
+    cursor: pointer;
+    background-color: white;
+}
+
+a.intermedio-button { 
+    display: inline-block; 
+    text-decoration: none; 
+    color: transparent; 
+}
+
+a.avanzado-button { 
+    display: inline-block; 
+    text-decoration: none; 
+    color: transparent; 
+}
+
+a.impropio-button { 
+    display: inline-block; 
+    text-decoration: none; 
+    color: transparent; 
+}
+
+a.mixto-button { 
+    display: inline-block; 
+    text-decoration: none; 
+    color: transparent; 
+}
+
+.nivels {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nivels .image {
+    flex: 1 1 200px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* Estilos para fraciones en los problemas*/
+
+.levels h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#score-display {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#score {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.score-board {
+    width: 100px;
+    height: 25px;
+    background-color: #00344e; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px; 
+    border-radius: 50%;
+    background-color: #cbd3d8;
+}
+
+.circle-right {
+    background-color: #2ecc71;
+}
+
+.circle-wrong {
+    background-color: #e74c3c;
+}
+
+.frac-container-mix {
+    display: flex; 
+    justify-content: center; 
+    gap: 50px; 
+    margin-top: 40px; 
+    align-items: center;
+}
+
+/* Estilos para los botones de niveles */
+.mix-button {
+    font-size: large; 
+    background-color: rgb(84, 115, 250); 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-radius: 20px; 
+    position: absolute; 
+    bottom: 15px; 
+    right: 30px; 
+    cursor: pointer; 
+    border: none; 
+    color: white; 
+    text-align: center;
+}
+
+.inter-button {
+    font-size: large; 
+    background-color: rgb(84, 115, 250); 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-radius: 20px; 
+    position: absolute; 
+    bottom: 15px; 
+    right: 30px; 
+    cursor: pointer; 
+    border: none; 
+    color: white; 
+    text-align: center;
+}
+
+.avan-button {
+    font-size: large; 
+    background-color: rgb(84, 115, 250); 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-radius: 20px; 
+    position: absolute; 
+    bottom: 15px; 
+    right: 30px; 
+    cursor: pointer; 
+    border: none; 
+    color: white; 
+    text-align: center;
+}
+
+.imp-button {
+    font-size: large; 
+    background-color: rgb(84, 115, 250); 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-radius: 20px; 
+    position: absolute; 
+    bottom: 15px; 
+    right: 30px; 
+    cursor: pointer; 
+    border: none; 
+    color: white; 
+    text-align: center;
+}

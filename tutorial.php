@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Tutorial</title>
+</head>
+<body>
+    <div class="container">
+        <div class = 'top-buttons'>
+            <div class = 'child inline-block-child'>
+                <header>
+                    <h1>Como Jugar</h1>
+                </header>
+            </div>
+            <div class = 'child inline-block-child'>
+                <audio id="myAudio">
+                    <source src="game_music.mp3" type="audio/mpeg">
+                </audio>
+                <button id="music-button" class="music-button" type="button"><span>Musica</span></button>
+            </div>
+            <div class = 'child inline-block-child'>
+                <a href="nivels.php" class="end-tut-button">Finalizar tutorial</a>
+            </div>
+            <div class = 'child inline-block-child'>
+                <a href="index.php" class="log-out-button"><span>Salir</span></a>
+            </div>
+        </div>
+        <section class = 'content'>
+            <div id="tutorial-step-1" class="tutorial-step">
+                <h2>Comparación de Fracciones</h2>
+                <p>Tendrás dos fracciones con diferente numeradores o denominadores.</p>
+                <div class="frac-container">
+                    <div class="frac">
+                        <span>4</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">6</span>
+                    </div>
+                    <div class="frac">
+                        <span>5</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">7</span>
+                    </div>
+                </div>
+                <div class="asteroid-container">
+                <div class="moon shadow-layer moon-gray">
+                    <div class="white-body">
+                    <div class="crater c1"></div>
+                    <div class="crater c2"></div>
+                    <span class="symbol">&lt;</span>
+                    </div>
+                </div>
+                <div class="moon shadow-layer moon-gray">
+                    <div class="white-body">
+                    <div class="crater c1"></div>
+                    <div class="crater c2"></div>
+                    <span class="symbol">=</span>
+                    </div>
+                </div>
+                <div class="moon shadow-layer moon-gray">
+                    <div class="white-body">
+                    <div class="crater c1"></div>
+                    <div class="crater c2"></div>
+                    <span class="symbol">&gt;</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="tutorial-step-2" class="tutorial-step" style="display:none;">
+                <h2 style="text-align: center;">¿Que hago?</h2>
+                <p>¡Tienes que hacer clic en uno de los tres símbolos diferent para completar la expresión!</p>
+                <div class="frac-container">
+                    <div class="frac">
+                        <span>4</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">6</span>
+                    </div>
+                    <div class="frac">
+                        <span>5</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">7</span>
+                    </div>
+                </div>
+                <div class="asteroid-container2">
+                <div class="moon shadow-layer moon-red">
+                    <div class="white-body">
+                    <div class="crater c1"></div>
+                    <div class="crater c2"></div>
+                    <span class="symbol">&lt;</span>
+                    </div>
+                </div>
+                <div class="moon shadow-layer moon-red">
+                    <div class="white-body">
+                    <div class="crater c1"></div>
+                    <div class="crater c2"></div>
+                    <span class="symbol">=</span>
+                    </div>
+                </div>
+                <div class="moon shadow-layer moon-red">
+                    <div class="white-body">
+                    <div class="crater c1"></div>
+                    <div class="crater c2"></div>
+                    <span class="symbol">&gt;</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="tutorial-step-3" class="tutorial-step" style="display:none;">
+                <h2>Pero ¿que son estos símbolos?</h2>
+                <div class="symbol-row">
+                    <div class="moon shadow-layer moon-gray">
+                        <div class="white-body">
+                        <div class="crater c1"></div>
+                        <div class="crater c2"></div>
+                        <span class="symbol">&lt;</span>
+                        </div>
+                    </div>
+                    <p>(menor que) Por ejemplo: 5 es menor que 10, entonces 5 &lt; 10</p>
+                </div>
+                <div class="symbol-row">
+                    <div class="moon shadow-layer moon-gray">
+                        <div class="white-body">
+                        <div class="crater c1"></div>
+                        <div class="crater c2"></div>
+                        <span class="symbol">=</span>
+                        </div>
+                    </div>
+                    <p>(igual a) Por ejemplo: 4 es igual a 4 entonces 4 = 4</p>
+                </div>
+                <div class="symbol-row">
+                    <div class="moon shadow-layer moon-gray">
+                        <div class="white-body">
+                            <div class="crater c1"></div>
+                            <div class="crater c2"></div>
+                            <span class="symbol">&gt;</span>
+                        </div>
+                    </div>
+                    <p>(mayor que) Por ejemplo: 3 es mayor que 1 entonces 3 &gt; 1</p>
+                </div>
+            </div>
+            <div id="tutorial-step-4" class="tutorial-step" style="display:none;">
+                <h2>Mismo Numerador</h2>
+                <div class="step-4-content">
+                    <div class="leftimg"></div>
+                    <div class="frac-container">
+                        <div class="frac">
+                            <span>1</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">3</span>
+                        </div>
+                        <div class="moon shadow-layer moon-gray">
+                            <div class="white-body">
+                            <div class="crater c1"></div>
+                            <div class="crater c2"></div>
+                            <span class="symbol">&gt;</span>
+                            </div>
+                        </div>
+                        <div class="frac">
+                            <span>1</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">4</span>
+                        </div>
+                    </div>
+                    <div class="rightimg"></div>
+                </div>
+                <p>Si tienes el mismo numerador, recuerda que con las fracciones el denominador menor es la fracción mayor. Puedes ver eso en los dibujos.</p>
+            </div>
+            <div id="tutorial-step-5" class="tutorial-step" style="display:none;">
+                <h2>Fracciones con diferente denominador</h2>
+                <p>Si tiene diferente denominadors, usa la mínimo común denominador. Después puedes ver si la numerador es meyor, menor o igual!</p>
+                <div class="frac-container">
+                    <div class="frac">
+                        <span>4 × 7</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">6 × 7</span>
+                    </div>
+                    <div class="moon shadow-layer moon-gray">
+                        <div class="white-body">
+                        <div class="crater c1"></div>
+                        <div class="crater c2"></div>
+                        <span class="symbol">=</span>
+                        </div>
+                    </div>
+                    <div class="frac">
+                        <span>5 × 6</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">7 × 6</span>
+                    </div>
+                </div>
+                <div class="frac-container">
+                    <div class="frac">
+                        <span>28</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">42</span>
+                    </div>
+                    <div class="moon shadow-layer moon-gray">
+                        <div class="white-body">
+                        <div class="crater c1"></div>
+                        <div class="crater c2"></div>
+                        <span class="symbol">&lt;</span>
+                        </div>
+                    </div>
+                    <div class="frac">
+                        <span>30</span>
+                        <span class="symbol">/</span>
+                        <span class="bottom">42</span>
+                    </div>
+                </div>
+            </div>
+            <button class="next-button" onclick="nextStep()">Proxima</button>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; SmileAndLearn2026</p>
+    </footer>
+</body>
+</html>
